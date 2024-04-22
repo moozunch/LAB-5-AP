@@ -12,7 +12,7 @@ int main(){
         for (int i = 2; i <= angka; i+=2){
             sum += i*i;
         }
-    } else if (angka < 1){
+    } else if (angka < 0){
         for (int i = -2; i >= angka; i-=2){
             sum += i*i;
         }
