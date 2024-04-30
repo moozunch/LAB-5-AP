@@ -4,6 +4,7 @@ using namespace std;
 
 int inglobal;
 
+//deretnya satu satu dilakukan pencocokan disini untuk output
 string fizzbuzz(int input){
     string result;
         if (input % 3 == 0 && input % 5 == 0){
@@ -19,6 +20,7 @@ string fizzbuzz(int input){
 
 }
 
+//dipanggil kesini dulu untuk lakuin deretnya
 string deretsegitiga(int input){
     string result = "";
     for (int i = 1; i <= input; i++){
