@@ -27,12 +27,17 @@ void tampilkan(){
     }
 }
 
-int caribesar(int abc){
+int placecol;
+int caribesar(int abc, int& placecol){
     int temp;
     temp = angka[abc][0];
     for (int j = 0; j < 3; j++){
+        if (j == placecol){
+            continue;
+        }
         if (angka[abc][j] > temp){
             temp = angka[abc][j];
+            placecol = j;
         }
     }
     return temp;
@@ -46,10 +51,20 @@ int main() {
 
     input();
     tampilkan();
-    int A = 0, B = 1, C = 2; //untuk baris 
-    A = caribesar(A);
-    B = caribesar(B);
-    C = caribesar(C);
+    int B = 1, C = 2; //untuk baris 
+    
+    // yang A spesial dicari pakai langsung agar column pertama tetap di cek
+    int temp;
+    temp = angka[0][0];
+    for (int j = 0; j < 3; j++){
+        if (angka[0][j] > temp){
+            temp = angka[0][j];
+            placecol = j;
+        }
+    } int A = temp;
+    cout << A << placecol << endl;
+    B = caribesar(B, placecol);     cout << B << placecol << endl;
+    C = caribesar(C, placecol);    cout << C << placecol << endl;
 
     cout << "Nilai Efisiensi: " << fixed << setprecision(1) << efisiensi(A, B, C);
 
