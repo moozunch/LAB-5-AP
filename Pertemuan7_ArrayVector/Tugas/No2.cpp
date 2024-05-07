@@ -63,8 +63,8 @@ int main() {
         }
     } int A = temp;
     cout << A << placecol << endl;
-    B = caribesar(B, placecol);     cout << B << placecol << endl;
-    C = caribesar(C, placecol);    cout << C << placecol << endl;
+    B = caribesar(B, placecol);    
+    C = caribesar(C, placecol);    
 
     cout << "Nilai Efisiensi: " << fixed << setprecision(1) << efisiensi(A, B, C);
 
